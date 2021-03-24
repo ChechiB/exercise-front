@@ -19,7 +19,6 @@ class ProductList extends React.Component{
         const query = searchStr.split('=')[1];
         search(query)
             .then(resp => {
-                console.log('search', resp);
                 this.setState({
                     author: resp.author,
                     items: resp.items,
