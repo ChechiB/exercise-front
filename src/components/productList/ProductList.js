@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import { search } from "../../utils/apiCalls";
 import ProductLine from "../productLine/ProductLine";
 import Breadcrumb from "../breadcrumb/Breadcrumb";
-
+import wrapper from "../wrapper/Wrapper"
 class ProductList extends React.Component{
     constructor(props){
         super(props);
@@ -15,6 +15,7 @@ class ProductList extends React.Component{
 
     componentDidMount(){
         //Validate search and query
+        console.log(this.props);
         const searchStr= this.props.location.search;
         const query = searchStr.split('=')[1];
         search(query)
@@ -25,6 +26,21 @@ class ProductList extends React.Component{
                     categories: resp.categories
                 });
             })
+    }
+
+    componentDidUpdate(prevProps){
+        if (this.props.location.search !== prevProps.location.search ) {
+            const searchStr= this.props.location.search;
+            const query = searchStr.split('=')[1];
+            search(query)
+                .then(resp => {
+                    this.setState({
+                        author: resp.author,
+                        items: resp.items,
+                        categories: resp.categories
+                    });
+                })
+        }
     }
 
     render(){
@@ -49,4 +65,4 @@ class ProductList extends React.Component{
     }
 }
 
-export default ProductList;
+export default wrapper(ProductList);

@@ -1,5 +1,5 @@
 import React, {Fragment} from "react";
-import SearchBox from "./components/searchBox/SearchBox"
+import wrapper from "./components/wrapper/Wrapper"
 class App extends React.Component{
   
 
@@ -7,10 +7,10 @@ class App extends React.Component{
     
     return(
         <Fragment>
-          <SearchBox></SearchBox>
+          <p>APP</p>
         </Fragment>
       )
   };
 }
 
-export default App;
+export default wrapper(App);

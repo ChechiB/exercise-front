@@ -4,7 +4,7 @@ import ProductDetail from "../productDetail/ProductDetail";
 import SideBar from "../sideBar/SideBar";
 import {Card} from "react-bootstrap";
 import Breadcrumb from "../breadcrumb/Breadcrumb";
-
+import wrapper from "../wrapper/Wrapper"
 class ProductItem extends React.Component{
     constructor(props){
         super(props);
@@ -45,4 +45,4 @@ class ProductItem extends React.Component{
     }
 }
 
-export default ProductItem;
+export default wrapper(ProductItem);

@@ -31,6 +31,7 @@ class SearchBox extends React.Component{
             <Fragment>
                 <input type="text" onChange={this.setQuery} value={this.state.query}/>
                 <button onClick={this.handlerSearch}>Buscar</button>
+                <p>query: {this.state.query}</p>
             </Fragment>
         );
     }
