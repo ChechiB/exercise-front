@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { search } from "../../utils/apiCalls";
+import { search } from "./service";
 import ProductLine from "../productLine/ProductLine";
 import Breadcrumb from "../breadcrumb/Breadcrumb";
 import wrapper from "../wrapper/Wrapper"
@@ -15,7 +15,6 @@ class ProductList extends React.Component{
 
     componentDidMount(){
         //Validate search and query
-        console.log(this.props);
         const searchStr= this.props.location.search;
         const query = searchStr.split('=')[1];
         search(query)

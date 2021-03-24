@@ -1,5 +1,5 @@
 import React from "react";
-import { getProductDetail } from "../../utils/apiCalls";
+import { getProduct } from "./service";
 import ProductDetail from "../productDetail/ProductDetail";
 import SideBar from "../sideBar/SideBar";
 import {Card} from "react-bootstrap";
@@ -17,7 +17,7 @@ class ProductItem extends React.Component{
     componentDidMount(){
         //Validate id
         const id= this.props.match.params.id;
-        getProductDetail(id).then(resp => {
+        getProduct(id).then(resp => {
             this.setState({
                 author: resp.author,
                 item: resp.item
