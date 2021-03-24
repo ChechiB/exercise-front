@@ -2,7 +2,7 @@ import React, {Fragment} from "react";
 
 class Breadcrumb extends React.Component{
     handlerCategory(category){
-        return <li>{category}</li>
+        return <li key={category.id}>{category.name}</li>
     }
 
     render(){

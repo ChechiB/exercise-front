@@ -32,7 +32,7 @@ class ProductItem extends React.Component{
                     <p>PRODUCT ITEM</p>
                     <div className="breadcrumb">
                         {   
-                            this.state.item.breadcrumb > 0
+                            Object.keys(this.state.item).length > 0
                             ?<Breadcrumb key={this.state.item.id} breadcrumb={this.state.item.breadcrumb}></Breadcrumb>
                             :<p>No categories found</p>
                         }           
