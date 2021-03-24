@@ -6,7 +6,7 @@ export async function getProductDetail(id) {
             'Content-Type': 'application/json'
         }
         })
-        .then( res => { return res.json()})
+        .then( res => { return res.json() })
         .catch(error => console.log(error) )
 }
 
@@ -18,6 +18,6 @@ export async function search(query) {
             'Content-Type': 'application/json'
         }
         })
-        .then( res => { return res.json()})
+        .then( res => { return res.json() })
         .catch(error => console.log(error) )
 }
