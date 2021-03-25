@@ -1,7 +1,6 @@
 import React,{Fragment} from "react";
 import {Card} from "react-bootstrap";
 import { withRouter } from "react-router";
-import Breadcrumb from "../breadcrumb/Breadcrumb";
 
 class ProductLine extends React.Component{
     constructor(props){

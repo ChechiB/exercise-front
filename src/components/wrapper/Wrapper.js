@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import SearchBox from "../searchBox/SearchBox"
 
 const wrapper = (PrevComponent) => {
