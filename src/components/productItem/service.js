@@ -6,6 +6,7 @@ export async function getProduct(id) {
             'Content-Type': 'application/json'
         }
         })
-        .then( res => { return res.json() })
+        .then( res => { 
+            return res.json() })
         .catch(error => console.log(error) )
 }
