@@ -30,15 +30,17 @@ class ProductItem extends React.Component{
             <Card>
                 <Card.Body>
                     <p>PRODUCT ITEM</p>
-                    <div className="breadcrumb">
-                        {   
-                            Object.keys(this.state.item).length > 0
-                            ?<Breadcrumb key={this.state.item.id} breadcrumb={this.state.item.breadcrumb}></Breadcrumb>
-                            :<p>No categories found</p>
-                        }           
-                    </div>
-                    <ProductDetail item={this.state.item} ></ProductDetail>
-                    <SideBar item={this.state.item} ></SideBar>
+                    {
+                        Object.keys(this.state.item).length > 0 
+                        ?<div className="product-item">
+                            <div className="breadcrumb">
+                                <Breadcrumb key={this.state.item.id} breadcrumb={this.state.item.breadcrumb}></Breadcrumb>      
+                            </div>
+                            <ProductDetail item={this.state.item} ></ProductDetail>
+                            <SideBar item={this.state.item} price={this.state.item.price}></SideBar>
+                        </div>
+                        :<p>No categories found</p>
+                    }
                 </Card.Body>
             </Card>
         );
