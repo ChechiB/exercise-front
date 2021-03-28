@@ -1,17 +1,17 @@
 import React, {Fragment} from "react";
-
+import './Breadcrumb.scss';
 class Breadcrumb extends React.Component{
     handlerCategory(category){
-        return <li key={category.id}>{category.name}</li>
+        return <li key={category.id}> {category.name} </li>
     }
 
     render(){
         return(
-            <Fragment>
+            <div className="nav">
                 <ul className="category">
                     {this.props.breadcrumb.map(this.handlerCategory)}
                 </ul>
-            </Fragment>
+            </div>
         );
     }
 }

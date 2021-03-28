@@ -1,5 +1,7 @@
 import React,{Fragment} from "react";
+import { Container, Row, Col } from "react-bootstrap";
 import { withRouter } from "react-router";
+import "./SearchBox.scss";
 
 class SearchBox extends React.Component{
     constructor(props){
@@ -28,10 +30,16 @@ class SearchBox extends React.Component{
 
     render(){        
         return(
-            <Fragment>
-                <input type="text" onChange={this.setQuery} value={this.state.query}/>
-                <button onClick={this.handlerSearch}>Buscar</button>
-            </Fragment>
+            <div className="search-box">
+                <Container fluid>
+                    <Row>
+                        <Col sm={{ span: 10, offset: 1}}>
+                            <input type="text" onChange={this.setQuery} value={this.state.query}/>
+                            <button onClick={this.handlerSearch}>Buscar</button>
+                        </Col>
+                    </Row>
+                </Container>
+            </div>
         );
     }
 }

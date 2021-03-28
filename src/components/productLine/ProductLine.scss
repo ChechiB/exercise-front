@@ -1,0 +1,49 @@
+.product-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 4px;
+    margin: 16px;
+    cursor: pointer;
+}
+
+
+.product-line-container {
+    display: inline-block;
+    width: 100%;
+    .product-text{
+        display: inline-block;
+        max-width: 60%;
+        .product-wrapper{
+            display: inline-block;
+            .product-price {
+                display: inline-block;
+                .product-amount{
+                    font-size: 24px;
+                    margin-bottom: 32px;
+                }
+                .product-decimals{
+                    padding-left: 2px;
+                    padding-right: 2px;
+                }
+                .shipping-img{
+    
+                }
+            }
+            .shipping{
+
+            }
+        }
+        .product-title {
+            font-size: 18px;
+            display: block;
+            cursor: pointer;
+        }
+    }
+}
+
+.product-city{
+    p{
+        margin-bottom: 0px;
+    }
+    font-size: 12px;
+}

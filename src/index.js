@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.scss';
 import reportWebVitals from './reportWebVitals';
 import Router from './Router';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router />
+    <div className="body-container">
+      <Router />
+    </div>
   </React.StrictMode>,
   document.getElementById('root')
 );
