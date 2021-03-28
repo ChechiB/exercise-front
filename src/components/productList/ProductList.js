@@ -64,9 +64,11 @@ class ProductList extends React.Component{
         return(
             <Container className="list-container">
                 { this.state.searching
-                    ?<Spinner animation="border" role="status">
-                        <span className="sr-only">Loading...</span>
-                    </Spinner>
+                    ?<div>
+                        <Spinner className="spinner-custom" animation="border" role="status">
+                            <span className="sr-only">Loading...</span>
+                        </Spinner>
+                    </div>
                     :<Fragment>
                         <Row>
                             <Col>

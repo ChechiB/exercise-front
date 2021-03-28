@@ -1,15 +1,13 @@
-.product-img {
-    width: 180px;
-    height: 180px;
-    border-radius: 4px;
-    margin: 16px;
-    cursor: pointer;
-}
-
-
 .product-line-container {
     display: inline-block;
     width: 100%;
+    .product-img {
+        width: 180px;
+        height: 180px;
+        border-radius: 4px;
+        margin: 16px;
+        cursor: pointer;
+    }
     .product-text{
         display: inline-block;
         max-width: 60%;
