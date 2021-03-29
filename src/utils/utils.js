@@ -15,6 +15,6 @@ export function getSymbol(currency){
     return symbol;
 }
 
-export function getStatus(){
-    
+export function getStatus(condition){
+    return condition ? 'Nuevo' : 'Usado'
 }
