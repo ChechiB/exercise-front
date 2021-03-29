@@ -8,7 +8,6 @@ export function getSymbol(currency){
     let symbol = '$';
     COUNTRIES.forEach(country => {
         if (country.currency === currency) {
-            console.log(country.symbol);
             symbol = country.symbol;
         };
     });

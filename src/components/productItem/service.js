@@ -7,6 +7,9 @@ export async function getProduct(id) {
         }
         })
         .then( res => { 
+            if ( res.status){
+                throw res.json();
+            }
             return res.json() })
         .catch(error => console.log(error) )
 }

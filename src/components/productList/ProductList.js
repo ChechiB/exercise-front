@@ -25,7 +25,6 @@ class ProductList extends React.Component{
     componentDidMount(){
         const searchStr= this.props.location.search;
         const query = searchStr.split('=')[1];
-        console.log(query);
         if (query) {
             this.setState({searching: true }); 
             search(query)
@@ -41,7 +40,7 @@ class ProductList extends React.Component{
                     this.setState({
                         searching: false,
                         error: {
-                            message: 'Ocurrió un error. Intentelo nuevamente más tarde',
+                            message: 'Producto no encontrado',
                             status: true
                         }
                     })

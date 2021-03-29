@@ -23,7 +23,7 @@ class ProductItem extends React.Component{
     
     componentDidMount(){
         const id= this.props.match.params.id;
-        let regex = new RegExp(/^([A-Z]{3}[0-9]+)$/);
+        let regex = new RegExp(/^([A-Z]{3}[0-9]+)$/); //@FIX-ME: add other countries to regex using countries.ts
         if( regex.test(id)){
             getProduct(id)
                 .then(resp => {
@@ -39,7 +39,7 @@ class ProductItem extends React.Component{
                 .catch(e => {
                     this.setState({
                         error: {
-                            message: 'Ocurrió un error. Intentelo nuevamente más tarde',
+                            message: 'Producto no encontrado',
                             status: true
                         }
                     })
