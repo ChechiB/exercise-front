@@ -7,9 +7,10 @@ export async function getProduct(id) {
         }
         })
         .then( res => { 
-            if ( res.status){
+            if ( res.status >= 400 && res.status <= 500 ){
                 throw res.json();
             }
-            return res.json() })
+            return res.json()
+        })
         .catch(error => console.log(error) )
 }

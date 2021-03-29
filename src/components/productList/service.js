@@ -7,7 +7,7 @@ export async function search(query) {
         }
         })
         .then( res => { 
-            if ( res.status){
+            if ( res.status >= 400 && res.status <= 500 ){
                 throw res.json();
             }
             return res.json() })
