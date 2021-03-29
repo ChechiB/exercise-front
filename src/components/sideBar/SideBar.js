@@ -1,6 +1,6 @@
 import React,{Fragment} from "react";
 import "./SideBar.scss";
-import { formatDecimal } from "../../utils/utils";
+import { formatDecimal, getSymbol } from "../../utils/utils";
 
 class SideBar extends React.Component{
     render(){
@@ -10,11 +10,11 @@ class SideBar extends React.Component{
             <p className="side-bar-condition">{condition.charAt(0).toUpperCase() + condition.slice(1, condition.length)} - {sold_quantity} vendidos</p>
             <p className="side-bar-title">{title}</p>
             <p className="side-bar-price">
+                {getSymbol(currency)}
                 {amount} 
                 <span className="side-bar-decimals">
                     <sup>{formatDecimal(decimals)}</sup>
                 </span> 
-                {currency}
             </p>
             <button className="side-bar-button">Comprar</button>
         </Fragment>

@@ -22,7 +22,7 @@ class ProductLine extends React.Component{
     
 
     render(){
-        const { picture, title, price, free_shipping, condition } = this.props.details;
+        const { picture, title, price, free_shipping } = this.props.details;
         return <Container>
             <Row>
                 <Col sm={8} className="product-line-container">
@@ -40,7 +40,7 @@ class ProductLine extends React.Component{
                             </div>
                             {
                                 free_shipping
-                                ?<img className="shipping-img" src={ShippingLogo}/>
+                                ?<img className="shipping-img" src={ShippingLogo} alt="ShippingLogo"/>
                                 :null
                             }
                         </div>

@@ -1,11 +1,20 @@
-.category li {
-    display: inline-block;
-    size: 14px;
-    padding-right: 15px;
-}
-
 .category{
     margin-top: 16px;
     margin-bottom: 16px;
     padding-left: 0;
+    
+    .category-item{
+        display: inline-block;
+        size: 14px;
+        padding-right: 5px;
+        color: #999999;
+    }
+
+    .category-last-item{
+        display: inline-block;
+        size: 14px;
+        padding-right: 5px;
+        color: #666666;
+        font-weight: 600;
+    }
 }

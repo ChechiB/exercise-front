@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-import {Card} from "react-bootstrap";
 import './ProductDetail.scss';
 
 class ProductDetail extends React.Component{
@@ -14,7 +13,6 @@ class ProductDetail extends React.Component{
                     <p className="product-detail-text">
                         {description}
                     </p>
-
             </Fragment>
                 
         );

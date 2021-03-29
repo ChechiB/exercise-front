@@ -1,4 +1,4 @@
-import React,{Fragment} from "react";
+import React from "react";
 import { Container, Row, Col, InputGroup, FormControl, Form } from "react-bootstrap";
 import { withRouter } from "react-router";
 import "./SearchBox.scss";
