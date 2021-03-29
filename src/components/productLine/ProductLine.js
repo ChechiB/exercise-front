@@ -2,14 +2,14 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { withRouter } from "react-router";
 import './ProductLine.scss';
-import ShippingLogo from "../../assets/img/ic_shipping.png"
+import ShippingLogo from "../../assets/img/ic_shipping.png";
+import { formatDecimal } from "../../utils/utils";
 
 class ProductLine extends React.Component{
     constructor(props){
         super(props);
         this.handlerProduct = this.handlerProduct.bind(this);
-        this.formatDecimal = this.formatDecimal.bind(this);
-    }
+}
 
     handlerProduct(event){
         if (this.props.cod){
@@ -19,9 +19,7 @@ class ProductLine extends React.Component{
         }
     }
 
-    formatDecimal(decimals){
-        return decimals < 10 ?  decimals.toString() + 0 : decimals
-    }
+    
 
     render(){
         const { picture, title, price, free_shipping, condition } = this.props.details;
@@ -32,13 +30,13 @@ class ProductLine extends React.Component{
                     <div className="product-text">
                         <div className="product-wrapper">
                             <div className="product-price">
-                                <spam> $ </spam>
-                                <spam className="product-amount">
+                                <span> $ </span>
+                                <span className="product-amount">
                                     {price.amount}
-                                </spam>
-                                <spam className="product-decimals">
-                                    <sup>{ this.formatDecimal(price.decimals) }</sup> 
-                                </spam>
+                                </span>
+                                <span className="product-decimals">
+                                    <sup>{ formatDecimal(price.decimals) }</sup> 
+                                </span>
                             </div>
                             {
                                 free_shipping
@@ -47,9 +45,9 @@ class ProductLine extends React.Component{
                             }
                         </div>
                         <div className="product-title" onClick={this.handlerProduct}>
-                            <spam >
+                            <span >
                                 {title}
-                            </spam>
+                            </span>
                         </div>
                     </div>
                 </Col>

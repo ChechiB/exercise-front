@@ -2,4 +2,27 @@
     background-color: #FFE600;
     padding-left: 2rem;
     padding-right: 2rem;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    .search-box-container{
+        display: inline-block;
+        .search-box-logo{
+            padding: 2px;
+            height: 80%;
+            margin-right: 20px;
+        }
+        .search-box-group {
+            display:inline-block;
+            min-width: 80%;
+            .search-box-input{
+                outline: none;
+                box-shadow: none;
+                border: none;
+            }
+            .search-box-btn{
+                border: none;
+            }
+        }
+    }
 }
+

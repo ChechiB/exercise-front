@@ -1,21 +1,22 @@
-import React from "react";
+import React, { Fragment } from "react";
 import {Card} from "react-bootstrap";
+import './ProductDetail.scss';
 
 class ProductDetail extends React.Component{
     render(){
-        const { picture, desc, title } = this.props.item; 
+        const { picture, description, title } = this.props.item; 
         return(
-            <Card>
-                <Card.Body>
-                    <img src={picture} alt={title}/>
-                    <p>
+            <Fragment>
+                    <img className="product-detail-img" src={picture} alt={title}/>
+                    <p className="product-detail-title">
                         Descripción del producto
                     </p>
-                    <p>
-                        {desc}
+                    <p className="product-detail-text">
+                        {description}
                     </p>
-                </Card.Body>
-            </Card>
+
+            </Fragment>
+                
         );
     }
 }

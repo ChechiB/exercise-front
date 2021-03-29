@@ -18,7 +18,6 @@ class ProductList extends React.Component{
     }
 
     componentDidMount(){
-        //Validate search and query
         const searchStr= this.props.location.search;
         const query = searchStr.split('=')[1];
         if (query) {
@@ -62,39 +61,41 @@ class ProductList extends React.Component{
 
     render(){
         return(
-            <Container className="list-container">
-                { this.state.searching
-                    ?<div>
-                        <Spinner className="spinner-custom" animation="border" role="status">
-                            <span className="sr-only">Loading...</span>
-                        </Spinner>
-                    </div>
-                    :<Fragment>
-                        <Row>
-                            <Col>
-                                {   
-                                    Object.keys(this.state.categories).length > 0
-                                    ?<Breadcrumb key={this.state.items.id} breadcrumb={this.state.categories}></Breadcrumb>
-                                    :<p>No categories found</p>
-                                }  
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col>
-                                <Card>
-                                    <Card.Body>
-                                        {
-                                            Object.keys(this.state.items).length > 0
-                                            ?this.state.items.map(item => <ProductLine key={item.id} cod={item.id} details={item}/>)
-                                            : <p>No items found</p>
-                                        }
-                                    </Card.Body>
-                                </Card>
-                            </Col>
-                        </Row>
-                    </Fragment>
-                }
-            </Container>
+            <div className="list-container">
+                <Container fluid>
+                    { this.state.searching
+                        ?<div>
+                            <Spinner className="spinner-custom" animation="border" role="status">
+                                <span className="sr-only">Loading...</span>
+                            </Spinner>
+                        </div>
+                        :<Fragment>
+                            <Row>
+                                <Col sm={{ span: 10, offset: 1}}>
+                                    {   
+                                        Object.keys(this.state.categories).length > 0
+                                        ?<Breadcrumb key={this.state.items.id} breadcrumb={this.state.categories}></Breadcrumb>
+                                        :<p>No categories found</p>
+                                    }  
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col sm={{ span: 10, offset: 1}}>
+                                    <Card>
+                                        <Card.Body>
+                                            {
+                                                Object.keys(this.state.items).length > 0
+                                                ?this.state.items.map(item => <ProductLine key={item.id} cod={item.id} details={item}/>)
+                                                : <p>No items found</p>
+                                            }
+                                        </Card.Body>
+                                    </Card>
+                                </Col>
+                            </Row>
+                        </Fragment>
+                    }
+                </Container>
+            </div>
         );
     }
 }

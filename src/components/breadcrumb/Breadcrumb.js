@@ -7,11 +7,11 @@ class Breadcrumb extends React.Component{
 
     render(){
         return(
-            <div className="nav">
+            
                 <ul className="category">
                     {this.props.breadcrumb.map(this.handlerCategory)}
                 </ul>
-            </div>
+ 
         );
     }
 }
